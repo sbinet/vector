@@ -14,12 +14,12 @@ type State interface {
    IsGoal() bool
 }
 
-func Search( initial State ) State {
-   list := newStateHeap();
+func Search(initial State) State {
+   list := newStateHeap()
 
    // Start out with the list of states only containing the initial state
-   list.Push( initial )
-   
+   list.Push(initial)
+
    // While there are still states to explore...
    for !list.Empty() {
       // Take the top element off of the list (it's a heap, so we're guarunteed
@@ -31,7 +31,7 @@ func Search( initial State ) State {
          return cur
       } else {
          // Otherwise add all of its children to the list and keep searchin
-         list.Push( cur.GetNext()... )
+         list.Push(cur.GetNext()...)
       }
    }
 

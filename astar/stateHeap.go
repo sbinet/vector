@@ -65,8 +65,8 @@ func (me *stateHeap) HeapifyDown(idx int) {
    var min int
 
    // Index of the left and right children of the state at 'idx'
-   left  := idx * 2
-   right := idx * 2 + 1
+   left := idx * 2
+   right := idx*2 + 1
 
    s := *me
 
@@ -95,4 +95,3 @@ func (me *stateHeap) HeapifyDown(idx int) {
       me.HeapifyDown(min)
    }
 }
-
